@@ -27,7 +27,6 @@ export class DialogComponent {
 
   }
 
-
     addProduct() {
 
       if (this.productForm.valid) {
@@ -40,6 +39,7 @@ export class DialogComponent {
             this.productForm.reset();
             this.dialogRef.close('save');
           },
+          
           error: (err) => {
             console.log(err);
             alert("Something went wrong");
