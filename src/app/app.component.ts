@@ -29,36 +29,43 @@ export class AppComponent implements OnInit{
   @ViewChild(MatSort) sort!: MatSort;
   
   
+
+  
   
 // Avtomatic started when the page is refreshed
   ngOnInit(): void {
     this.getAllProducts();
   }
 
+
+  
+// Open the dialog
+openDialog(): void {
+  this.dialog.open(DialogComponent, {
+  width: "30%",
+  });
+}
+
+
+
   // Get all products from the database
-    getAllProducts(){
-      this.api.getProduct()
-      .subscribe({
-        next: (res) => {
-          this.dataSource = new MatTableDataSource(res);
-          this.dataSource.paginator = this.paginator;
-          this.dataSource.sort = this.sort;
-  
-        },
-        error: (err) => {
-          alert("Something went wrong");
-        }
-      })
-  
-    }
+  getAllProducts(){
+    this.api.getProduct()
+    .subscribe({
+      next: (res) => {
+        this.dataSource = new MatTableDataSource(res);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+
+      },
+      error: (err) => {
+        alert("Something went wrong");
+      }
+    })
+
+  }
 
     
-// Open the dialog
-  openDialog(): void {
-    this.dialog.open(DialogComponent, {
-    width: "30%",
-    });
-  }
 
 
 
@@ -72,7 +79,6 @@ export class AppComponent implements OnInit{
       this.dataSource.paginator.firstPage();
     }
   }
-
 
 
 
