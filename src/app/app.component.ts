@@ -9,7 +9,6 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,11 +17,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 export class AppComponent implements OnInit{
   title = 'MyApp';
-  constructor(private dialog: MatDialog, private api:ApiService) {}
+
+  constructor(
+    private dialog: MatDialog,
+    private api:ApiService
+    
+  ) {}
 
 
   
-  displayedColumns: string[] = ['ProductName', 'Category', 'Date', 'Condition','Price','Comment'];
+  displayedColumns: string[] = [ 'Id','ProductName', 'Category', 'Date', 'Condition','Price','Comment', 'Action'];
   dataSource!: MatTableDataSource<any>;
   
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -33,52 +37,68 @@ export class AppComponent implements OnInit{
   
   
 // Avtomatic started when the page is refreshed
-  ngOnInit(): void {
-    this.getAllProducts();
-  }
+ngOnInit(): void {
+  this.getAllProducts();
+}
 
 
-  
+    
 // Open the dialog
 openDialog(): void {
   this.dialog.open(DialogComponent, {
   width: "30%",
+  }).afterClosed().subscribe(result => {
+    if (result==="save") {
+      this.getAllProducts();
+    }
   });
 }
 
 
 
-  // Get all products from the database
-  getAllProducts(){
-    this.api.getProduct()
-    .subscribe({
-      next: (res) => {
-        this.dataSource = new MatTableDataSource(res);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
+// Get all products from the database
+getAllProducts(){
+  this.api.getProduct()
+  .subscribe({
+    next: (res) => {
+      this.dataSource = new MatTableDataSource(res);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
 
-      },
-      error: (err) => {
-        alert("Something went wrong");
-      }
-    })
+    },
+    error: (err) => {
+      alert("Something went wrong");
+    }
+  })
 
-  }
+}
 
     
 
 
-
-
 // Filter the products by category
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+applyFilter(event: Event) {
+  const filterValue = (event.target as HTMLInputElement).value;
+  this.dataSource.filter = filterValue.trim().toLowerCase();
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
+  if (this.dataSource.paginator) {
+    this.dataSource.paginator.firstPage();
   }
+}
+
+
+// edit produtc 
+editProduct(product:any){
+  this.dialog.open(DialogComponent, {
+    width: "30%",
+    data: product, 
+  }).afterClosed().subscribe(result => {
+    if (result==="update") {
+      this.getAllProducts(); 
+    }
+  });
+}
+
 
 
 
