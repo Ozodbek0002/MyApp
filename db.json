@@ -1,31 +1,13 @@
 {
   "productList": [
     {
-      "productName": "Test ",
-      "category": "Samsung",
+      "productName": "Test",
+      "category": "Iphone",
       "date": "2015-02-24T19:00:00.000Z",
-      "condition": "Second Hand",
-      "price": "546",
+      "condition": "New",
+      "price": "5466",
       "comment": "Aliquam ipsum sit e",
       "id": 1
-    },
-    {
-      "productName": "Lewis Gallagher 1",
-      "category": "Samsung",
-      "date": "2015-02-24T19:00:00.000Z",
-      "condition": "Second Hand",
-      "price": "546",
-      "comment": "Aliquam ipsum sit e",
-      "id": 2
-    },
-    {
-      "productName": "Ali Bentley",
-      "category": "Iphone",
-      "date": "2017-12-05T19:00:00.000Z",
-      "condition": "Second Hand",
-      "price": "857",
-      "comment": "Pariatur Amet nece",
-      "id": 3
     },
     {
       "productName": "Lysandra Morton",
@@ -46,24 +28,6 @@
       "id": 5
     },
     {
-      "productName": "Lewis Gallagher Acia",
-      "category": "Samsung",
-      "date": "2015-02-24T19:00:00.000Z",
-      "condition": "Second Hand",
-      "price": "546",
-      "comment": "Aliquam ipsum sit e",
-      "id": 6
-    },
-    {
-      "productName": "Eric Olsen",
-      "category": "Mi",
-      "date": "1971-10-25T18:00:00.000Z",
-      "condition": "B/Y",
-      "price": "740",
-      "comment": "Harum aperiam illo v",
-      "id": 7
-    },
-    {
       "productName": "Cruz Murphy",
       "category": "Mi",
       "date": "1971-03-29T18:00:00.000Z",
@@ -71,6 +35,105 @@
       "price": "838",
       "comment": "Quod ut vel est vero",
       "id": 8
+    },
+    {
+      "productName": "Mannix Marquez",
+      "category": "Samsung",
+      "date": "1988-02-23T18:00:00.000Z",
+      "condition": "New",
+      "price": "260",
+      "comment": "Dolorum sunt facilis",
+      "id": 9
+    },
+    {
+      "productName": "Lana Miles",
+      "category": "Iphone",
+      "date": "2004-02-27T19:00:00.000Z",
+      "condition": "Second Hand",
+      "price": "435",
+      "comment": "In perferendis natus",
+      "id": 10
+    },
+    {
+      "productName": "Brennan Alston",
+      "category": "Samsung",
+      "date": "1991-02-03T18:00:00.000Z",
+      "condition": "New",
+      "price": "830",
+      "comment": "Accusantium voluptas",
+      "id": 11
+    },
+    {
+      "productName": "Reuben Figueroa",
+      "category": "Samsung",
+      "date": "2000-07-29T19:00:00.000Z",
+      "condition": "B/Y",
+      "price": "807",
+      "comment": "Totam aliquip eos in",
+      "id": 12
+    },
+    {
+      "productName": "Uta Winters",
+      "category": "Huawe",
+      "date": "1992-06-25T19:00:00.000Z",
+      "condition": "Second Hand",
+      "price": "705",
+      "comment": "Ullamco cumque volup",
+      "id": 13
+    },
+    {
+      "productName": "Bevis Buckner",
+      "category": "Iphone",
+      "date": "1992-03-11T19:00:00.000Z",
+      "condition": "B/Y",
+      "price": "155",
+      "comment": "Laborum Nobis enim ",
+      "id": 14
+    },
+    {
+      "productName": "Isaac Carson",
+      "category": "Mi",
+      "date": "1984-05-11T17:00:00.000Z",
+      "condition": "New",
+      "price": "885",
+      "comment": "Et dolores neque iru",
+      "id": 15
+    },
+    {
+      "productName": "Nicholas Christensen",
+      "category": "Samsung",
+      "date": "2004-02-28T19:00:00.000Z",
+      "condition": "B/Y",
+      "price": "195",
+      "comment": "Tempor quas nostrum ",
+      "id": 16
+    },
+    {
+      "productName": "Murphy Pacheco",
+      "category": "Mi",
+      "date": "1993-09-25T19:00:00.000Z",
+      "condition": "New",
+      "price": "972",
+      "comment": "Ut ut dolores commod",
+      "id": 17
+    },
+    {
+      "productName": "Ila Barnett",
+      "category": "Samsung",
+      "date": "1988-06-19T17:00:00.000Z",
+      "condition": "B/Y",
+      "price": "542",
+      "comment": "Veritatis quos archi",
+      "id": 18
+    },
+    {
+      "productName": "Tana Sears",
+      "category": "Samsung",
+      "date": "1979-04-20T18:00:00.000Z",
+      "condition": "B/Y",
+      "price": "561",
+      "comment": "Tempora soluta volup",
+      "id": 19
     }
   ]
 }

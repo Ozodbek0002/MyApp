@@ -54,7 +54,6 @@ export class DialogComponent {
 
 
   // Product qo`shish uchun funksiya
-
   addProduct() {
 
     if(!this.editData) {
@@ -64,7 +63,7 @@ export class DialogComponent {
         next: (res) => {
           alert("Product added successfully");
           this.productForm.reset();
-          this.dialogRef.close('save');
+          this.dialogRef.close("save");
         },
         error: (err) => {
           alert("Something went wrong while adding");
@@ -82,14 +81,13 @@ export class DialogComponent {
 
 
   // Productni yangilash uchun funksiya
-
   updateProduct() {
     this.api.putProduct( this.productForm.value, this.editData.id )
     .subscribe({
       next: (res) => {
         alert("Product updated successfully");
         this.productForm.reset();
-        this.dialogRef.close('update');
+        this.dialogRef.close("update");
       },
       error: (err) => {
         alert("Something went wrong while updating ");
@@ -97,6 +95,9 @@ export class DialogComponent {
                 
     })
   }
+
+
+
   
 
 }
